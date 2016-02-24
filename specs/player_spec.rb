@@ -12,4 +12,16 @@ def test_players_name
   assert_equal("Tony", @player1.name)
 end
 
+def test_players_position
+  assert_equal("Midfield", @player1.position)
+end
+
+
+
+
+
+
+
+
+
 end
