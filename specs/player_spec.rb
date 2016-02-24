@@ -16,7 +16,9 @@ def test_players_position
   assert_equal("Midfield", @player1.position)
 end
 
-
+def test_players_number
+  assert_equal("7", @player1.number)
+end
 
 
 
