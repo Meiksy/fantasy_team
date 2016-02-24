@@ -10,7 +10,7 @@ end
 
 def test_return_players
   @team1.players
-assert_equal("Bill" "Ben", @team1.players)
+assert_equal(["Bill", "Ben"], @team1.players)
 end
 
 
