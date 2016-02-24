@@ -2,7 +2,7 @@ class Bench
 
   attr_reader(:subs)
 
-def initiailize(*players)
+def initialize(*players)
   @subs = players
 
 end 
