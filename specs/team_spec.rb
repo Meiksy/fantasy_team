@@ -13,6 +13,9 @@ def test_return_players
 assert_equal(["Bill", "Ben"], @team1.players)
 end
 
+def test_return_name_of_team
+  assert_equal("CodeClan United", @team1.name)
+end
 
 
 
