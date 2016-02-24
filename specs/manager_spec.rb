@@ -7,8 +7,9 @@ require_relative('../manager')
 class TestManager < Minitest::Test
 
 def setup
-  @manager = Manager.new("Bon Jovi", "Man Utd", "Barca", "Alloa")  
-  @team1 = Team.new("CodeClan Utd", "Bob", "Steve", "Trev")
+  @team1 = Team.new("CodeClan Utd", "Bob", "Steve", "Trev", "Gavin")
+  @bench1 = Bench.new("Po", "Lala")
+  @manager = Manager.new("Bon Jovi", "Man Utd", "Barca", "Alloa", @bench1)  
 end
 
 
@@ -29,5 +30,17 @@ def test_include_players
   assert_equal([["Trev", "Bob", "Steve"], ["Brian", "Jo"]], result)
 end
 
+def test_sub_players
+  result = @manager.sub(@team1, "Trev", "Bob", @bench1)
+  assert_equal(["Po", "Lala", "Trev", "Bob"], @bench1.subs)
+  
+end
 
 end
+
+
+
+
+
+
+

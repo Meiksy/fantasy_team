@@ -1,6 +1,6 @@
 class Manager
 
-attr_reader(:name, :previous_clubs)
+attr_reader(:name, :previous_clubs, :salary)
 
 def initialize(name, *previous_clubs)
   @name = name
@@ -26,6 +26,21 @@ def include_players(team, *players)
   end
   end
   return [playing, not_playing]
+end
+
+def sub(team, *players, bench)
+
+  for player in players
+    if team.players.include?(player) == true
+      index = team.players.index(player)
+      bench.subs << (team.players[index])
+    else 
+      "Not playing"
+    end 
+    
+  end
+    return bench.subs
+  
 end
 
 

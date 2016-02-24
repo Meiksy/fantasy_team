@@ -4,8 +4,8 @@ class Bench
 
 def initialize(*players)
   @subs = players
-
 end 
+
 
 
 end
